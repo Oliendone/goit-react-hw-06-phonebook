@@ -12,9 +12,7 @@ const itemsReducer = createReducer([], {
 });
 
 const filterReducer = createReducer('', {
-  [contactActions.filterContacts]: (state, action) => action.payload.filter,
+  [contactActions.filterContacts]: (state, action) => action.payload,
 });
 
 export default combineReducers({ items: itemsReducer, filter: filterReducer });
-
-//
